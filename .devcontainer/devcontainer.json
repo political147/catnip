@@ -2,7 +2,8 @@
   "name": "Catnip Development",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/wandb/catnip/feature:1": {}
   },
   "customizations": {
     "vscode": {
@@ -16,5 +17,8 @@
     }
   },
   "postCreateCommand": "echo 'Dev container ready!'",
-  "remoteUser": "root"
+  "remoteUser": "root",
+  "forwardPorts": [
+    6369
+  ]
 }
